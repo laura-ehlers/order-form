@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+<main>
+    <h1>Order Form</h1>
+    <h2>Computer Components</h2>
+    <article>
+        <article>
+
+            <h3>Product list</h3>
+            <table style="width:70%">
+                <tr>
+                    <th align="left">Product</th>
+                    <th align="left">Price</th>
+                    <th align="left">Amount</th>
+                    <th align="left">Actions</th>
+                </tr>
+                <tr>
+                    <td>Motherboard</td>
+                    <td>224,99€</td>
+                    <td class="test">
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Network Card</td>
+                    <td>299,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        <span>0</span>
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Graphic Card</td>
+                    <td>499,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        0
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Processor</td>
+                    <td>355,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        0
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hard Driver</td>
+                    <td>84,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        0
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>USB ports</td>
+                    <td>30,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        0
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Monitor port</td>
+                    <td>34,99€</td>
+                    <td>
+                        <button class="decrement button">-</button>
+                        0
+                        <button class="increment button">+</button>
+                    </td>
+                    <td>
+                        <button class="button">Add to order</button>
+                    </td>
+                </tr>
+            </table>
+        </article>
+        <aside>
+            <h3>Your order</h3>
+            <table style="width: 30%">
+                <tr>
+                    <th align="left">Product</th>
+                    <th align="left">Amount</th>
+                    <th align="left">Price per unit</th>
+                    <th align="left">full price</th>
+                </tr>
+                <tr>
+                    <td>Motherboard</td>
+                    <td>2</td>
+                    <td>224,99€</td>
+                    <td>449,98€</td>
+                </tr>
+            </table>
+            <div>SUM=</div>
+        </aside>
+    </article>
+    <section>
+        <h3>Billing Address</h3>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="street">Street:</label><br>
+            <input type="text" id="street" name="street"><br>
+            <label for="hnumber">House number:</label><br>
+            <input type="text" id="hnumber" name="hnumber"><br>
+            <label for="pcode">Post Code:</label><br>
+            <input type="text" id="pcode" name="pcode"><br>
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city"><br>
+            <label for="country">Country:</label><br>
+            <input type="text" id="country" name="country"><br>
+        </form>
+    </section>
+    <button class="button">Place Order</button>
+</main>
+<script language="JavaScript" type="text/javascript" src="order.js"></script>
+</body>
+</html>
