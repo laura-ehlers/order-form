@@ -1,13 +1,98 @@
 * {
     font-family: 'Poppins', sans-serif;
+    background-color: moccasin;
+}
+
+main {
+    margin: 0 100px;
 }
 
 h1 {
-    color: blue;
+    font-weight: 600;
 }
 
 .button {
-    border: 3px solid green;
+    border: 2px solid green;
     background-color: darkseagreen;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+tr th {
+    border-bottom: 2px solid black;
+}
+
+article > table tr td:nth-of-type(1) {
+    width: 20%;
+    white-space: nowrap;
+}
+
+article > table tr td:nth-of-type(3) {
+    width: 15%;
+    white-space: nowrap;
+}
+
+article > table tr td:nth-of-type(4), article > table tr td:nth-of-type(5) {
+    width: 1%;
+    white-space: nowrap;
+}
+
+aside > table tr td:nth-of-type(2) {
+    width: 1%;
+    white-space: nowrap;
+}
+
+#outer-space {
+    width: 100%;
+    overflow: hidden;
+    /*border: 1px solid black;*/
+}
+
+#outer-space article {
+    width: 60%;
+    float: left;
+    /*border: 1px solid black;*/
+}
+
+#outer-space article table {
+    width: 100%;
+}
+
+#outer-space aside {
+    float: right;
+    /*border: 1px solid black;*/
+    width: 30%;
+}
+
+#outer-space aside table {
+    width: 100%;
+}
+
+#outer-space .vertical-line {
+    width: 4%;
+    height: 600px;
+    float: left;
+}
+
+#outer-space .vertical-line:nth-of-type(1) {
+    border-right: 2px solid black;
+    width: 5%
+}
+
+#total {
+    float: right;
+}
+
+#billing-address {
+    display: none;
+}
+
+#place-order {
+    float: right;
+}
+
+.disabled-button {
+    border-color: rgba(250, 250, 250, .1);
+    background: rgba(50, 50, 50, .4);
+    color: rgba(0, 0, 0, .2);
 }

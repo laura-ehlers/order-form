@@ -13,19 +13,21 @@
 <main>
     <h1>Order Form</h1>
     <h2>Computer Components</h2>
-    <article>
-        <article>
+    <article id="outer-space">
+        <article id="product-list">
 
             <h3>Product list</h3>
-            <table style="width:70%">
+            <table>
                 <tr>
                     <th align="left">Product</th>
+                    <th align="left">Description</th>
                     <th align="left">Price</th>
                     <th align="left">Amount</th>
                     <th align="left">Actions</th>
                 </tr>
                 <tr>
                     <td>Motherboard</td>
+                    <td>A motherboard is the main printed circuit board (PCB) in a computer.</td>
                     <td>224,99€</td>
                     <td class="test">
                         <button class="decrement button" onclick="decrement(this)">-</button>
@@ -38,6 +40,7 @@
                 </tr>
                 <tr>
                     <td>Network Card</td>
+                    <td>A network card or a network interface card is a card that connects a computer to a network.</td>
                     <td>299,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -50,6 +53,9 @@
                 </tr>
                 <tr>
                     <td>Graphic Card</td>
+                    <td>A graphics card is a type of display adapter or video card installed within most computing
+                        devices to display graphical data
+                    </td>
                     <td>499,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -62,6 +68,9 @@
                 </tr>
                 <tr>
                     <td>Processor</td>
+                    <td>A processor is the part of a computer that interprets commands and performs the processes the
+                        user has requested.
+                    </td>
                     <td>355,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -74,6 +83,9 @@
                 </tr>
                 <tr>
                     <td>Hard Driver</td>
+                    <td>The hard drive is what stores all your data. It houses the hard disk, where all your files and
+                        folders are physically located.
+                    </td>
                     <td>84,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -86,6 +98,7 @@
                 </tr>
                 <tr>
                     <td>USB ports</td>
+                    <td>A USB port a type of serial port for connecting peripheral devices to a system.</td>
                     <td>30,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -98,6 +111,9 @@
                 </tr>
                 <tr>
                     <td>Monitor port</td>
+                    <td>A monitor port is a port used to establish the connection between the monitor and computer in
+                        order to display the computer's output.
+                    </td>
                     <td>34,99€</td>
                     <td>
                         <button class="decrement button">-</button>
@@ -110,14 +126,35 @@
                 </tr>
             </table>
         </article>
+        <article id="billing-address">
+            <h3>Billing Address</h3>
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="street">Street:</label><br>
+                <input type="text" id="street" name="street"><br>
+                <label for="hnumber">House number:</label><br>
+                <input type="text" id="hnumber" name="hnumber"><br>
+                <label for="pcode">Post Code:</label><br>
+                <input type="text" id="pcode" name="pcode"><br>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city"><br>
+                <label for="country">Country:</label><br>
+                <input type="text" id="country" name="country"><br>
+            </form>
+        </article>
+        <div class="vertical-line"></div>
+        <div class="vertical-line"></div>
         <aside>
             <h3>Your order</h3>
-            <table style="width: 30%">
+            <table>
                 <tr>
                     <th align="left">Product</th>
                     <th align="left">Amount</th>
                     <th align="left">Price per unit</th>
-                    <th align="left">full price</th>
+                    <th align="left">Full price</th>
                 </tr>
                 <tr>
                     <td>Motherboard</td>
@@ -126,29 +163,12 @@
                     <td>449,98€</td>
                 </tr>
             </table>
-            <div>SUM=</div>
+            <div id="total">Total <span>0</span></div>
         </aside>
     </article>
-    <section>
-        <h3>Billing Address</h3>
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="street">Street:</label><br>
-            <input type="text" id="street" name="street"><br>
-            <label for="hnumber">House number:</label><br>
-            <input type="text" id="hnumber" name="hnumber"><br>
-            <label for="pcode">Post Code:</label><br>
-            <input type="text" id="pcode" name="pcode"><br>
-            <label for="city">City:</label><br>
-            <input type="text" id="city" name="city"><br>
-            <label for="country">Country:</label><br>
-            <input type="text" id="country" name="country"><br>
-        </form>
-    </section>
-    <button class="button">Place Order</button>
+    <button class="button disabled-button" id="prev" onclick="prev()">Prev</button>
+    <button class="button" id="next" onclick="next()">Next</button>
+    <button class="button" id="place-order" onclick="placeOrder()">Place Order</button>
 </main>
 <script language="JavaScript" type="text/javascript" src="order.js"></script>
 </body>
