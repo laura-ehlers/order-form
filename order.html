@@ -13,6 +13,10 @@
 <main>
     <h1>Order Form</h1>
     <h2>Computer Components</h2>
+    <article id="message">
+        Your order has be placed and will be sent to the following address.
+    </article>
+    <article id="address"></article>
     <article id="outer-space">
         <article id="product-list">
 
@@ -28,27 +32,27 @@
                 <tr>
                     <td>Motherboard</td>
                     <td>A motherboard is the main printed circuit board (PCB) in a computer.</td>
-                    <td>224,99€</td>
+                    <td>224.99</td>
                     <td class="test">
                         <button class="decrement button" onclick="decrement(this)">-</button>
                         <span>0</span>
                         <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
                     <td>Network Card</td>
                     <td>A network card or a network interface card is a card that connects a computer to a network.</td>
-                    <td>299,99€</td>
+                    <td>299.99</td>
                     <td>
-                        <button class="decrement button">-</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
                         <span>0</span>
-                        <button class="increment button">+</button>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
@@ -56,14 +60,14 @@
                     <td>A graphics card is a type of display adapter or video card installed within most computing
                         devices to display graphical data
                     </td>
-                    <td>499,99€</td>
+                    <td>499.99</td>
                     <td>
-                        <button class="decrement button">-</button>
-                        0
-                        <button class="increment button">+</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
@@ -71,14 +75,14 @@
                     <td>A processor is the part of a computer that interprets commands and performs the processes the
                         user has requested.
                     </td>
-                    <td>355,99€</td>
+                    <td>355.99</td>
                     <td>
-                        <button class="decrement button">-</button>
-                        0
-                        <button class="increment button">+</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
@@ -86,27 +90,27 @@
                     <td>The hard drive is what stores all your data. It houses the hard disk, where all your files and
                         folders are physically located.
                     </td>
-                    <td>84,99€</td>
+                    <td>84.99</td>
                     <td>
-                        <button class="decrement button">-</button>
-                        0
-                        <button class="increment button">+</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
                     <td>USB ports</td>
                     <td>A USB port a type of serial port for connecting peripheral devices to a system.</td>
-                    <td>30,99€</td>
+                    <td>30.99</td>
                     <td>
-                        <button class="decrement button">-</button>
-                        0
-                        <button class="increment button">+</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
                 <tr>
@@ -114,61 +118,65 @@
                     <td>A monitor port is a port used to establish the connection between the monitor and computer in
                         order to display the computer's output.
                     </td>
-                    <td>34,99€</td>
+                    <td>34.99</td>
                     <td>
-                        <button class="decrement button">-</button>
-                        0
-                        <button class="increment button">+</button>
+                        <button class="decrement button" onclick="decrement(this)">-</button>
+                        <span>0</span>
+                        <button class="increment button" onclick="increment(this)">+</button>
                     </td>
                     <td>
-                        <button class="button">Add to order</button>
+                        <button class="button" onclick="addToOrder(this)">Add to order</button>
                     </td>
                 </tr>
             </table>
         </article>
         <article id="billing-address">
             <h3>Billing Address</h3>
-            <form>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="street">Street:</label><br>
-                <input type="text" id="street" name="street"><br>
-                <label for="hnumber">House number:</label><br>
-                <input type="text" id="hnumber" name="hnumber"><br>
-                <label for="pcode">Post Code:</label><br>
-                <input type="text" id="pcode" name="pcode"><br>
-                <label for="city">City:</label><br>
-                <input type="text" id="city" name="city"><br>
-                <label for="country">Country:</label><br>
-                <input type="text" id="country" name="country"><br>
-            </form>
+            <section>
+                <form>
+                    <section>
+                        <label for="fname">First name</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                    </section>
+                    <section>
+                        <label for="street">Street</label><br>
+                        <input type="text" id="street" name="street"><br>
+                        <label for="hnumber">House number</label><br>
+                        <input type="text" id="hnumber" name="hnumber"><br>
+                        <label for="pcode">Post Code</label><br>
+                        <input type="text" id="pcode" name="pcode"><br>
+                        <label for="city">City</label><br>
+                        <input type="text" id="city" name="city"><br>
+                    </section>
+                    <section>
+                        <label for="country">Country</label><br>
+                        <input type="text" id="country" name="country"><br>
+                    </section>
+                </form>
+            </section>
         </article>
         <div class="vertical-line"></div>
         <div class="vertical-line"></div>
         <aside>
             <h3>Your order</h3>
-            <table>
+            <table id="yourOrder">
                 <tr>
                     <th align="left">Product</th>
                     <th align="left">Amount</th>
                     <th align="left">Price per unit</th>
                     <th align="left">Full price</th>
                 </tr>
-                <tr>
-                    <td>Motherboard</td>
-                    <td>2</td>
-                    <td>224,99€</td>
-                    <td>449,98€</td>
-                </tr>
             </table>
-            <div id="total">Total <span>0</span></div>
+            <button class="button" onclick="clearOrder()">Clear</button>
+            <div id="total"><span>0</span>€ Total</div>
         </aside>
     </article>
     <button class="button disabled-button" id="prev" onclick="prev()">Prev</button>
     <button class="button" id="next" onclick="next()">Next</button>
     <button class="button" id="place-order" onclick="placeOrder()">Place Order</button>
+    <button class="button" id="reset" onclick="reset()">Reset</button>
 </main>
 <script language="JavaScript" type="text/javascript" src="order.js"></script>
 </body>

@@ -81,10 +81,12 @@ aside > table tr td:nth-of-type(2) {
 
 #total {
     float: right;
+    font-weight: 600;
 }
 
 #billing-address {
     display: none;
+    width: 60%;
 }
 
 #place-order {
@@ -95,4 +97,34 @@ aside > table tr td:nth-of-type(2) {
     border-color: rgba(250, 250, 250, .1);
     background: rgba(50, 50, 50, .4);
     color: rgba(0, 0, 0, .2);
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#billing-address section {
+    text-align: center;
+}
+
+section > label {
+    font-weight: 600;
+}
+
+#message {
+    display: none;
+}
+
+#address {
+    font-weight: 600;
+}
+
+#reset {
+    display: none;
 }
